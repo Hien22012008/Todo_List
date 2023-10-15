@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="todolistApp">
+        <h1 style="text-align: center;"> My ToDo List</h1>
+        <div class="todoInputSection">
+            <form @submit.prevent="submitHandler">
+                <input type="text" placeholder="Todo item" v-model.trim="newTodo" @input="inputTyping"
+                    @keyup.esc="editCancel" style="height: 30px; border-radius: 10px; text-align: center;"/>
+                <span v-if="editOption">
+                </span>
+                <p class="inputWarning" v-html="warningLabel" :class="{emptyWarning: redWarning}"></p>
+            </form>
+            <button class="addBtn" @click="submitHandler">Add todo</button>
+           
+            <hr>
+        </div>
+
+        <ul class="todo-list">
+            <li v-for="(todo,idx) in todos" class="list-item">
+                    <input type="checkbox"/>
+                    <p>
+                        {{todo.newTodo}}
+                    </p>
+                    <div style="padding-top: 10px;">
+                        <button class="deleteBtn" @click="removeHandler(idx)">x</button>
+                    </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

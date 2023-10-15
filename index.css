@@ -1,0 +1,67 @@
+body {
+	font-family: monospace, "Microsoft JhengHei";
+	background-color: rgb(246, 221, 213);
+}
+
+#todolistApp {
+	width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.todoInputSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 50px;
+}
+.inputWarning{
+	font-size: 10px;
+	margin-left: 12px;
+}
+.emptyWarning{
+	color: red;
+}
+
+.title {
+	margin-bottom: -5px;
+	
+}
+
+.todo-list {
+	text-align: left;
+	margin: 20px auto;
+	
+}
+
+.deleteBtn {
+	margin-left: 20px;
+	height: 30px;
+}
+button {
+	border-radius: 3px;
+}
+
+#learnInfo{
+	margin-top: 60px;
+	margin-left: 20px;
+	color: gray;
+	font-size:12px;
+	line-height: 16px;
+	
+}
+.list-item{
+	display: flex ;
+	background-color: rgb(187, 249, 249);
+
+}
+.addBtn{
+	background-color: rgb(0, 42, 255);
+	color: white;
+	padding: 6px;
+	margin-left: 20px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	height: 30px;
+}
